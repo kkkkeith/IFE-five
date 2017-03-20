@@ -17,7 +17,9 @@ var aqiData = [
     aqiData.filter(function check(a, index) {
     	if (a[1] > 60) {
     		text += "<li>第" + num[index] + "名:" + a[0] + ", " + a[1] + "</li>";}
-    	});
+    	return;
+        }
+   );
     document.getElementById("aqi-list").innerHTML=text; 
 })();
 
